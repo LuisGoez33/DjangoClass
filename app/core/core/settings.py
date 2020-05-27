@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'userdata',
     'proyectos',
-    'src',
+    'src.apps.SrcConfig',
 ]
 
 MIDDLEWARE = [
@@ -125,7 +125,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/src/assets/'
+STATIC_URL = '/static/'
 
 # Variables para ls archivos media
 
@@ -133,7 +133,7 @@ MEDIA_URL = '/media/'
 
 # Ruta para llegar a los archivos media
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "src/assets/media")
+MEDIA_ROOT = os.path.join(BASE_DIR, "src/static/assets/media/")
 
 # Editor de texto enriquecido
 
