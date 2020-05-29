@@ -10,9 +10,9 @@ class HomePageView(TemplateView):
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name, {'tituloIni': 'los saluda Luis Pablo Goez', 'titulo2': 'Clases de python'})
 
-class NosotrosPageView(TemplateView):
+class QuienesSomosPageView(TemplateView):
 
-    template_name = "nosotros.html"
+    template_name = "quienes_somos.html"
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name, {'titulonosotros': 'Acerca de nosotros', 'descripcion': 'Somos asi'})

@@ -1,8 +1,12 @@
+/* Pagina central */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Menu */
 
 .barra-menu{
     width: 100%;
@@ -85,6 +89,8 @@
     color: #FFF ;
 }
 
+/* Encabezado Index */
+
 .encabezado{
     width: 100%;
     height: 650px;
@@ -154,6 +160,8 @@
     border-color: #FFF transparent transparent transparent;  
 }
 
+/* Aplicacion Contenido */
+
 .contenedor{
     width: 90%;
     max-width: 1000px;
@@ -221,6 +229,8 @@
     width: 100%;
     height: 100%;
 }
+
+/* Quienes somos */
 
 .miembros{
     background: #6600FF;

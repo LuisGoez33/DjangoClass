@@ -1,40 +1,13 @@
 {% extends 'base.html' %}
 
-<!--- Variables de entorno de html: -->
 {% block titulo %} UPLINE {% endblock %}
 
 {% block contenido %}
 {% load static %}
-<!-- <h1>Hola desde el index</h1>
-
-    <h3 class="text-primary">{{ tituloIni }}</h3>
-
-    <h3>{{ titulo2 }}</h3> -->
-
-<header>
-    <nav class="barra-menu fixed-top">
-        <div class="logo">
-            <img src="static/assets/Media/img/logo-upline-blanco.png" alt="" width="40">
-        </div>
-        <div class="items">
-            <ul>
-                <li><a href="mockups.html" class="link-item">Aplicación</a></li>
-                <li><a class="link-item">Presentación <i class="fas fa-angle-down"></i></a>
-                    <ul class="desplegable">
-                        <li><a href="esquema.html">Base de datos</a></li>
-                        <li><a href="diccionario-datos.html">Diccionario de datos </a></li>
-                    </ul>
-                </li>
-                <li><a href="#miembros" class="link-item">Quiénes somos</a></li>
-                <li><a href="#contactenos" class="link-item">Contáctenos</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
 
 <div class="encabezado">
     <div class="textos">
-        <h1 class="titulo">Te presentamos <img src="static/assets/Media/img/logo-blanco.png" width="170"></h1>
+        <h1 class="titulo">Te presentamos <img src="{% static 'assets/Media/img/logo-blanco.png' %}" width="170"></h1>
         <h3 class="subtitulo">Una red social para los programadores que buscan un espacio para aprender mientras se
             relacionan con otros.</h3>
         <button href="#" class="boton">Previsualización de la aplicación</button>
@@ -59,15 +32,15 @@
             </p>
             <div class="cont-tarjetas">
                 <div class="tarjeta">
-                    <img src="static/assets/Media/img/publicar.png">
+                    <img src="{% static 'assets/Media/img/publicar.png' %}">
                     Publicar contenido
                 </div>
                 <div class="tarjeta">
-                    <img src="static/assets/Media/img/reaccion.png">
+                    <img src="{% static 'assets/Media/img/reaccion.png' %}">
                     Interactuar con el contenido de las publicaciones
                 </div>
                 <div class="tarjeta">
-                    <img src="static/assets/Media/img/relacionarse.png">
+                    <img src="{% static 'assets/Media/img/relacionarse.png' %}">
                     Relacionarse con otros usuarios
                 </div>
             </div>
@@ -75,7 +48,7 @@
         </div>
     </section>
 
-    <section class="miembros">
+    <!-- <section class="miembros">
         <div class="sesgoarriba"></div>
         <div class="contenedor" id="miembros">
             <h2 class="quienes-somos">Quiénes somos</h2>
@@ -96,7 +69,7 @@
             </div>
         </div>
 
-    </section>
+    </section> -->
 
     <section class="contactanos">
         <div class="contenedor" id="contactenos">
@@ -125,35 +98,5 @@
         <div class="sesgoabajo1"></div>
     </section>
 </main>
-
-
-<footer class="">
-    <div class="row">
-        <div class="col-6">
-            <img src="static/assets/Media/img/logo-upline-blanco.png" class="img1" width="40">
-            <img src="static/assets/Media/img/logo-blanco.png" class="img2" width="100">
-            <br><br>
-            &copy; Desarrollado por los miembros colaboradores de UPLINE
-        </div>
-        <div class="col-3">
-            <h4>Contacto:</h4>
-            <p>
-            <div class="correos">
-                <i class="far fa-envelope"></i> natagarge@hotmail.com
-                <br><br>
-                <i class="far fa-envelope"></i> nozon33_yt@hotmail.com
-            </div>
-            </p>
-        </div>
-        <div class="3">
-            <h4>Descubre más de nosotros </h4>
-            <div class="caja-redes">
-                <a href="#" class="redes"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="redes"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="redes"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </div>
-</footer>
 
 {% endblock %}

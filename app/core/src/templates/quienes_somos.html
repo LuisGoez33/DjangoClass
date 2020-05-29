@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block titulo %} QUIENES SOMOS {% endblock %}
+
+{% block contenido %}
+{% load static %}
+
+<section class="miembros">
+    <!-- <div class="sesgoarriba"></div> -->
+    <div class="contenedor" id="miembros">
+        <h2 class="quienes-somos mt-5">Quiénes somos</h2>
+        <h3 class="slogan">Conoce a quienes hacemos parte de esta aplicación</h3>
+        <div class="cards">
+            <div class="card-miembros">
+                <img src="{% static 'assets/Media/img/natalia.jpg' %}" alt="Natalia" width="300">
+                <h4>Natalia Garnica G.</h4>
+                <p>18 años - Bello</p>
+                <h5>Frontend y Backend</h5>
+            </div>
+            <div class="card-miembros">
+                <img src="{% static 'assets/Media/img/luis.jpg' %}" alt="Luis" width="300">
+                <h4>Luis Pablo Góez S.</h4>
+                <p>18 años - Bello</p>
+                <h5>Frontend y Backend</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

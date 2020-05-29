@@ -3,7 +3,7 @@
 <head>
     {% load static %}
     <meta charset="UTF-8">
-    <link rel="icon" href="static/assets/Media/img/favicon.ico">
+    <link rel="icon" href="{% static 'assets/Media/img/favicon.ico' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&family=Poppins&family=Quicksand&family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'assets/css/estilos.css' %}">
@@ -14,7 +14,57 @@
 </head>
 <body>
 
+    <header>
+        <nav class="barra-menu fixed-top">
+            <div class="logo">
+                <img src="{% static 'assets/Media/img/logo-upline-blanco.png' %}" alt="" width="40">
+            </div>
+            <div class="items">
+                <ul>
+                    <li><a href="{% url 'index' %}" class="link-item">Aplicación</a></li>
+                    <li><a class="link-item">Presentación <i class="fas fa-angle-down"></i></a>
+                        <ul class="desplegable">
+                            <li><a href="esquema.html">Base de datos</a></li>
+                            <li><a href="diccionario-datos.html">Diccionario de datos </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'quienes_somos' %}" class="link-item">Quiénes somos</a></li>
+                    <li><a href="#contactenos" class="link-item">Contáctenos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
     {% block contenido %} {% endblock %}
+
+    <footer class="">
+        <div class="row">
+            <div class="col-6">
+                <img src="{% static 'assets/Media/img/logo-upline-blanco.png' %}" class="img1" width="40">
+                <img src="{% static 'assets/Media/img/logo-blanco.png' %}" class="img2" width="100">
+                <br><br>
+                &copy; Desarrollado por los miembros colaboradores de UPLINE
+            </div>
+            <div class="col-3">
+                <h4>Contacto:</h4>
+                <p>
+                <div class="correos">
+                    <i class="far fa-envelope"></i> natagarge@hotmail.com
+                    <br><br>
+                    <i class="far fa-envelope"></i> nozon33_yt@hotmail.com
+                </div>
+                </p>
+            </div>
+            <div class="3">
+                <h4>Descubre más de nosotros </h4>
+                <div class="caja-redes">
+                    <a href="#" class="redes"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="redes"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="redes"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="{% static 'assets/js/jquery.js' %}"></script>
     <script src="{% static 'assets/js/popper.min.js' %}"></script>
