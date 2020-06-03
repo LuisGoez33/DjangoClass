@@ -5,10 +5,11 @@
 {% block contenido %}
 {% load static %}
 
-<section class="contactanos" style="height: 770px;">
+<section class="contactanos" style="height: 795px;">
     <div class="contenedor mt-3 mr-5 text-center" style="margin-left: 430px;">
         <h2 class="titulo-contacto mb-4" style="width: 650px;">Contáctanos</h2>
-        <h3 class="subtitulo-p mb-4" style="width: 650px;">Tienes alguna duda, opinión o quieres saber más, ¡Escribenos!</h3>
+        <h3 class="subtitulo-p mb-4" style="width: 650px;">Tienes alguna duda, opinión o quieres saber más, ¡Escribenos!
+        </h3>
         <div>
             <!-- <form action="" method="POST">
                 {% csrf_token %}
@@ -29,25 +30,19 @@
                 </div>
                 <div class="form-group col-sm-8">
                     <label for="formGroupExampleInput">Tipo de peticion:</label>
-                    <select class="form-control" name="tipomsj">
-                        <option value="">Seleccione una opcion</option>
-                        <option value="">Petición</option>
-                        <option value="">Queja</option>
-                        <option value="">Reclamo</option>
-                        <option value="">Solicitud</option>
-                        <option value="">Felicitación</option>
-                    </select>
+                    {{ formulario.tipomsj }}
                 </div>
                 <div class="form-group col-sm-8">
                     <label for="exampleFormControlTextarea1">Descripción: </label>
                     {{ formulario.descripcion }}
                 </div>
-                <div class="form-group">
-                    <span class="col-sm-8">
-                        {% if 'ok' in request.GET %}
-                            <span class="alert alert-success">Hemos recibido tu mensaje</span>
-                        {% endif %}
-                    </span>
+                <div class="form-group col-sm-8" style="margin-top: 33px;">
+                    {% if 'ok' in request.GET %}
+                    <span class="alert alert-success">Hemos recibido tu mensaje.</span>
+                    {% endif %}
+                    {% if 'fail' in request.GET %}
+                    <span class="alert alert-danger">No se puede enviar tu mensaje, Intentalo mas tarde.</span>
+                    {% endif %}
                 </div>
                 <div class="form-group col-sm-8">
                     <input class="btn btn-secondary mt-3 ml-3" type="submit" value="Enviar">
