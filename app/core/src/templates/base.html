@@ -24,8 +24,8 @@
                     <li><a href="{% url 'index' %}" class="link-item">Aplicación</a></li>
                     <li><a class="link-item">Presentación <i class="fas fa-angle-down"></i></a>
                         <ul class="desplegable">
-                            <li><a href="esquema.html">Base de datos</a></li>
-                            <li><a href="diccionario-datos.html">Diccionario de datos </a></li>
+                            <li><a href="{% url 'esquema' %}">Base de datos</a></li>
+                            <li><a href="{% url 'diccionario_datos' %}">Diccionario de datos </a></li>
                         </ul>
                     </li>
                     <li><a href="{% url 'quienes_somos' %}" class="link-item">Quiénes somos</a></li>

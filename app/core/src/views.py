@@ -14,14 +14,19 @@ class HomePageView(TemplateView):
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name)
 
+class DiccionarioDatosPageView(TemplateView):
 
-class QuienesSomosPageView(TemplateView):
-
-    template_name = "quienes_somos.html"
+    template_name = "diccionario_datos.html"
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name)
 
+class EsquemaPageView(TemplateView):
+
+    template_name = "esquema.html"
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name)
 
 def contacto(request):
     formContacto = ContactoForm()

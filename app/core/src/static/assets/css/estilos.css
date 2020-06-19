@@ -324,3 +324,63 @@ footer{
     padding-right: 40px;
     color: #FFFFFF;
 }
+
+
+/* ------------- */
+
+.card-tabla{
+    border: 1px #D1C4E9 solid;
+    border-radius: 5px;
+    color: #330099;
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    padding: 5px;
+}
+
+.card-tabla .marca{
+    background: #330099;
+    width: 45px;
+    height: 44px;
+    margin-top: -5px;
+    margin-left: -5px;
+    position: absolute;
+    border-radius: 5px 0px 0px 5px;
+}
+
+
+abbr {
+    cursor: help;
+}
+
+
+tr:hover {
+    color: #333;
+    background-color: #F3E5F5;
+}
+
+th {
+    background-color: #D1C4E9;
+    color: #330099;
+    font-family: 'Gotu', sans-serif;
+}
+
+td {
+    color: gray;
+}
+
+/* ------------ */
+
+.imagen2{
+    width: 90%;
+    margin-top: 5px;
+    margin-left: 5%;
+    margin-bottom: 50px;
+    border: black 2px solid;
+}
+
+.titulo2{
+    padding-top: 90px;
+    margin-left: 6%;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+}

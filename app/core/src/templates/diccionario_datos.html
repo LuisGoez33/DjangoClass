@@ -1,0 +1,1027 @@
+{% extends 'base.html' %}
+
+{% block titulo %} CONTACTO {% endblock %}
+
+{% block contenido %}
+{% load static %}
+
+<br>
+
+<h2 class="mt-5 text-center">Indice alfabético de las tablas</h2>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-6">
+                <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href='#chat' class="text-decoration-none"><i class="fas fa-table"></i> chat</a></li>
+                        <li class="list-group-item"><a href='#datosu' class="text-decoration-none"><i class="fas fa-table"></i> datosu</a></li>
+                        <li class="list-group-item"><a href='#detallechat' class="text-decoration-none"><i class="fas fa-table"></i> detallechat</a>
+                        </li>
+                        <li class="list-group-item"><a href='#detallerol' class="text-decoration-none"><i class="fas fa-table"></i> detallerol</a>
+                        </li>
+                        <li class="list-group-item"><a href='#detallespublicacion' class="text-decoration-none"><i class="fas fa-table"></i>
+                                detallespublicacion</a></li>
+                        <li class="list-group-item"><a href='#publicaciones' class="text-decoration-none"><i class="fas fa-table"></i>
+                                publicaciones</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item"><a href='#reseñas' class="text-decoration-none"><i class="fas fa-table"></i> reseñas</a></li>
+                        <li class="list-group-item"><a href='#roles' class="text-decoration-none"><i class="fas fa-table"></i> roles</a></li>
+                        <li class="list-group-item"><a href='#seguidores' class="text-decoration-none"><i class="fas fa-table"></i> seguidores</a>
+                        </li>
+                        <li class="list-group-item"><a href='#tipopublicacion' class="text-decoration-none"><i class="fas fa-table"></i>
+                                tipopublicacion</a></li>
+                        <li class="list-group-item"><a href='#usuario' class="text-decoration-none"><i class="fas fa-table"></i> usuario</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container mt-5">
+        <div class="card-tabla text-center" id='chat'>
+            <div class="marca">Tabla chat</div>
+                
+        </div>
+        <table class="table table-bordered mt-3 mb-5">
+            <tr>
+                <th>Column name</th>
+                <th>DataType</th>
+                <th><abbr title='Primary Key'>PK</abbr></th>
+                <th><abbr title='Not Null'>NN</abbr></th>
+                <th><abbr title='Unique'>UQ</abbr></th>
+                <th><abbr title='Binary'>BIN</abbr></th>
+                <th><abbr title='Unsigned'>UN</abbr></th>
+                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                <th><abbr title='Auto Increment'>AI</abbr></th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>idChat</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td></td>
+                <td>Id que se crea al iniciar un nuevo chat</td>
+            </tr>
+            <tr>
+                <td>fechaInicio</td>
+                <td>DATE</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Fecha de inicio de un nuevo chat</td>
+            </tr>
+            <tr>
+                <td>estado</td>
+                <td>VARCHAR(20)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Estado del chat(Activo/Inactivo/Eliminado)</td>
+            </tr>
+        </table>
+
+        <!-- Tabla datos usuario -->
+
+        <div class="card-tabla text-center mb-3" id='datosu'>
+            <div class="marca"></div>
+                Tabla datosu
+        </div>
+        <table class="table table-bordered mb-5">
+            <tr>
+                <th>Column name</th>
+                <th>DataType</th>
+                <th><abbr title='Primary Key'>PK</abbr></th>
+                <th><abbr title='Not Null'>NN</abbr></th>
+                <th><abbr title='Unique'>UQ</abbr></th>
+                <th><abbr title='Binary'>BIN</abbr></th>
+                <th><abbr title='Unsigned'>UN</abbr></th>
+                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                <th><abbr title='Auto Increment'>AI</abbr></th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>idDatosU</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td></td>
+                <td>Id con la que se identificará los datos del usuario.</td>
+            </tr>
+            <tr>
+                <td>FK_idUsuario</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Identificacion del usuario, clave foranea de la tabla Usuario.</td>
+            </tr>
+            <tr>
+                <td>nombres</td>
+                <td>VARCHAR(45)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Nombres que el usuario registra.</td>
+            </tr>
+            <tr>
+                <td>apellidos</td>
+                <td>VARCHAR(45)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Apellidos que el usuario registra.</td>
+            </tr>
+            <tr>
+                <td>usuario</td>
+                <td>VARCHAR(45)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Apodo que se crea el usuario por el cual puede ser buscado</td>
+            </tr>
+            <tr>
+                <td>fechaNacimiento</td>
+                <td>DATE</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Fecha de nacimiento que el usuario registra.</td>
+            </tr>
+            <tr>
+                <td>sexo</td>
+                <td>VARCHAR(45)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Sexo del usuario(Masculino/Femenino)</td>
+            </tr>
+            <tr>
+                <td>celular</td>
+                <td>INT(11)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Numero de contacto del usuario</td>
+            </tr>
+            <tr>
+                <td>ubicacion</td>
+                <td>VARCHAR(75)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Direccion de residencia del usuario</td>
+            </tr>
+            <tr>
+                <td>foto</td>
+                <td>VARCHAR(45)</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td>NULL</td>
+                <td>Foto de perfil del usuario</td>
+            </tr>
+            <tr>
+                <td>estado</td>
+                <td>VARCHAR(20)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Estado de los datos del usuario(Activo/Eliminado)</td>
+            </tr>
+        </table>
+
+        <!-- Tabla detalle chat -->
+
+        <div class="card-tabla text-center mb-3" id='detallechat'>
+            <div class="marca"></div>
+                Tabla detallechat
+        </div>
+        <table class="table table-bordered mb-5">
+            <tr>
+                <th>Column name</th>
+                <th>DataType</th>
+                <th><abbr title='Primary Key'>PK</abbr></th>
+                <th><abbr title='Not Null'>NN</abbr></th>
+                <th><abbr title='Unique'>UQ</abbr></th>
+                <th><abbr title='Binary'>BIN</abbr></th>
+                <th><abbr title='Unsigned'>UN</abbr></th>
+                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                <th><abbr title='Auto Increment'>AI</abbr></th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>idDetalleChat</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td></td>
+                <td>Id que se genera para los detalles del chat</td>
+            </tr>
+            <tr>
+                <td>FK_idUsuario</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Identificacion del usuario, clave foranea de la tabla Usuario</td>
+            </tr>
+            <tr>
+                <td>FK_idChat</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Id del chat, clave foranea de la tabla Chat</td>
+            </tr>
+            <tr>
+                <td>mensaje</td>
+                <td>VARCHAR(255)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Mensaje enviado por un usuario</td>
+            </tr>
+            <tr>
+                <td>fechaMensaje</td>
+                <td>DATE</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Fecha en la cual se envia el mensaje</td>
+            </tr>
+            <tr>
+                <td>estado</td>
+                <td>VARCHAR(20)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Estado del mensaje(Enviado/Eliminado)</td>
+            </tr>
+        </table>
+
+        <!-- Tabla detalle rol -->
+
+        <div class="card-tabla text-center mb-3" id='detallerol'>
+            <div class="marca"></div>
+                Tabla detallerol
+        </div>
+        <table class="table table-bordered mb-5">
+            <tr>
+                <th>Column name</th>
+                <th>DataType</th>
+                <th><abbr title='Primary Key'>PK</abbr></th>
+                <th><abbr title='Not Null'>NN</abbr></th>
+                <th><abbr title='Unique'>UQ</abbr></th>
+                <th><abbr title='Binary'>BIN</abbr></th>
+                <th><abbr title='Unsigned'>UN</abbr></th>
+                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                <th><abbr title='Auto Increment'>AI</abbr></th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>idDetalleRol</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td></td>
+                <td>Id con la cual se identificara el detalle del rol.</td>
+            </tr>
+            <tr>
+                <td>FK_idUsuario</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Identificacion del usuario, clave foranea de la tabla Usuario.</td>
+            </tr>
+            <tr>
+                <td>FK_idRoles</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Id del rol, clave foranea de la tabla Roles.</td>
+            </tr>
+            <tr>
+                <td>permisos</td>
+                <td>VARCHAR(45)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Permisos que brinda el rol al usuario.</td>
+            </tr>
+        </table>
+
+        <!-- Tabla detalle publicacion -->
+
+        <div class="card-tabla text-center mb-3" id='detallespublicacion'>
+            <div class="marca"></div>
+                Tabla detallespublicacion
+        </div>
+        <table class="table table-bordered mb-5">
+            <tr>
+                <th>Column name</th>
+                <th>DataType</th>
+                <th><abbr title='Primary Key'>PK</abbr></th>
+                <th><abbr title='Not Null'>NN</abbr></th>
+                <th><abbr title='Unique'>UQ</abbr></th>
+                <th><abbr title='Binary'>BIN</abbr></th>
+                <th><abbr title='Unsigned'>UN</abbr></th>
+                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                <th><abbr title='Auto Increment'>AI</abbr></th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>idDetallesPublicacion</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td></td>
+                <td>Id que se genera al crear una nueva publicación que corresponde a los detalles de la
+                    publicación</td>
+            </tr>
+            <tr>
+                <td>FK_idPublicacion</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Id de la publicación. clave forenea de la tabla publicaciones</td>
+            </tr>
+            <tr>
+                <td>FK_idUsuario</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Identificacion del usuario, clave foranea de la tabla usuario</td>
+            </tr>
+            <tr>
+                <td>comentario</td>
+                <td>TEXT</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Comentario que se realiza a una publicación</td>
+            </tr>
+            <tr>
+                <td>reaccion</td>
+                <td>VARCHAR(2)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Reaccion que se la a una puublicación(Me gusta/No me gusta)</td>
+            </tr>
+            <tr>
+                <td>compartir</td>
+                <td>VARCHAR(20)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Campo que informa si la publicación fue compartida o no</td>
+            </tr>
+        </table>
+
+        <!-- Tabla publicaciones -->
+
+        <div class="card-tabla text-center mb-3" id='publicaciones'>
+            <div class="marca"></div>
+                Tabla publicaciones
+        </div>
+        <table class="table table-bordered mb-5">
+            <tr>
+                <th>Column name</th>
+                <th>DataType</th>
+                <th><abbr title='Primary Key'>PK</abbr></th>
+                <th><abbr title='Not Null'>NN</abbr></th>
+                <th><abbr title='Unique'>UQ</abbr></th>
+                <th><abbr title='Binary'>BIN</abbr></th>
+                <th><abbr title='Unsigned'>UN</abbr></th>
+                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                <th><abbr title='Auto Increment'>AI</abbr></th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>idPublicacion</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td></td>
+                <td>Id que se genera al crear una nueva publicación</td>
+            </tr>
+            <tr>
+                <td>FK_idUsuario</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Identificacion del usuario, clave foranea de la tabla Usuario</td>
+            </tr>
+            <tr>
+                <td>FK_idTipoPublicacion</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Id del tipo de publicación, clave foranea de la tabla tipopublicacion</td>
+            </tr>
+            <tr>
+                <td>estadoPublicacion</td>
+                <td>VARCHAR(20)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Estado de la publicación(Activa/Archivada/Eliminada)</td>
+            </tr>
+            <tr>
+                <td>fechaPublicacion</td>
+                <td>DATE</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Fecha en la cual se realiza la publicación</td>
+            </tr>
+        </table>
+
+        <!-- Tabla reseñas -->
+
+        <div class="card-tabla text-center mb-3" id='reseñas'>
+            <div class="marca"></div>
+                Tabla reseñas
+        </div>
+        <table class="table table-bordered mb-5">
+            <tr>
+                <th>Column name</th>
+                <th>DataType</th>
+                <th><abbr title='Primary Key'>PK</abbr></th>
+                <th><abbr title='Not Null'>NN</abbr></th>
+                <th><abbr title='Unique'>UQ</abbr></th>
+                <th><abbr title='Binary'>BIN</abbr></th>
+                <th><abbr title='Unsigned'>UN</abbr></th>
+                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                <th><abbr title='Auto Increment'>AI</abbr></th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>idReseñas</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td></td>
+                <td>Id que se crea al escribir una reseña a un usuario</td>
+            </tr>
+            <tr>
+                <td>autor</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Identificacion del usuario que escribe la reseña</td>
+            </tr>
+            <tr>
+                <td>reseña</td>
+                <td>VARCHAR(255)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Contenido textual de la reseña</td>
+            </tr>
+            <tr>
+                <td>estado</td>
+                <td>VARCHAR(20)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Estado de la reseña(Activa/Eliminada)</td>
+            </tr>
+            <tr>
+                <td>fecha</td>
+                <td>DATE</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Fecha en la cual se escribe la reseña</td>
+            </tr>
+            <tr>
+                <td>reseñado</td>
+                <td>INT(11)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Identificacion del usuario al cual se dirije la reseña</td>
+            </tr>
+        </table>
+
+        <!-- Tabla roles -->
+
+        <div class="card-tabla text-center mb-3" id='roles'>
+            <div class="marca"></div>
+                Tabla roles
+        </div>
+        <table class="table table-bordered mb-5" >
+            <tr>
+                <th>Column name</th>
+                <th>DataType</th>
+                <th><abbr title='Primary Key'>PK</abbr></th>
+                <th><abbr title='Not Null'>NN</abbr></th>
+                <th><abbr title='Unique'>UQ</abbr></th>
+                <th><abbr title='Binary'>BIN</abbr></th>
+                <th><abbr title='Unsigned'>UN</abbr></th>
+                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                <th><abbr title='Auto Increment'>AI</abbr></th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>idRoles</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td></td>
+                <td>Id con la que se identificara el rol.</td>
+            </tr>
+            <tr>
+                <td>nombreRol</td>
+                <td>VARCHAR(45)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Nombre del rol existente registrado en la aplicacion.</td>
+            </tr>
+        </table>
+
+        <!-- Tabla seguidores -->
+
+        <div class="card-tabla text-center mb-3" id='seguidores'>
+            <div class="marca"></div>
+                Tabla seguidores
+        </div>
+
+        <table class="table table-bordered mb-5">
+            <tr>
+                <th>Column name</th>
+                <th>DataType</th>
+                <th><abbr title='Primary Key'>PK</abbr></th>
+                <th><abbr title='Not Null'>NN</abbr></th>
+                <th><abbr title='Unique'>UQ</abbr></th>
+                <th><abbr title='Binary'>BIN</abbr></th>
+                <th><abbr title='Unsigned'>UN</abbr></th>
+                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                <th><abbr title='Auto Increment'>AI</abbr></th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>idSeguidor</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td></td>
+                <td>Id que se guarda al crear una relacion entre dos usuarios</td>
+            </tr>
+            <tr>
+                <td>solicitante</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Identificacion del usuario que envia la solicitud de seguimiento
+                </td>
+            </tr>
+            <tr>
+                <td>solicitado</td>
+                <td>VARCHAR(45)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Identificacion de ususario el cual es solicitado por medio de una
+                    solicitud de segimiento.</td>
+            </tr>
+            <tr>
+                <td>fechaSolicitud</td>
+                <td>DATE</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Fecha en la cual se envia la solicitud de seguimiento</td>
+            </tr>
+            <tr>
+                <td>fechaAceptacion</td>
+                <td>DATE</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Fecha en la que se acepta la solicitud de seguimiento</td>
+            </tr>
+            <tr>
+                <td>estado</td>
+                <td>VARCHAR(45)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Estado de la relacion(Activa/Eliminada)</td>
+            </tr>
+            <tr>
+                <td>estadoSolicitud</td>
+                <td>VARCHAR(20)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Estado de la solicitud(Enviada/Aceptada/Rechazada)</td>
+            </tr>
+        </table>
+
+        <!-- Tabla tipo publicacion -->
+
+        <div class="card-tabla text-center mb-3" id='tipopublicacion'>
+            <div class="marca"></div>
+                Tabla tipopublicacion
+        </div>
+
+        <table class="table table-bordered mb-5">
+            <tr>
+                <th>Column name</th>
+                <th>DataType</th>
+                <th><abbr title='Primary Key'>PK</abbr></th>
+                <th><abbr title='Not Null'>NN</abbr></th>
+                <th><abbr title='Unique'>UQ</abbr></th>
+                <th><abbr title='Binary'>BIN</abbr></th>
+                <th><abbr title='Unsigned'>UN</abbr></th>
+                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                <th><abbr title='Auto Increment'>AI</abbr></th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>idTipoPublicacion</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td></td>
+                <td>Id que se genera al guardar un tipo de publicación</td>
+            </tr>
+            <tr>
+                <td>nombreTipo</td>
+                <td>VARCHAR(45)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Nombre del tipo de publicación</td>
+            </tr>
+        </table>
+
+        <!-- Tabla usuario -->
+
+        <div class="card-tabla text-center mb-3" id='usuario'>
+            <div class="marca"></div>
+                Tabla usuario
+        </div>
+        <table class="table table-bordered mb-5">
+            <tr>
+                <th>Column name</th>
+                <th>DataType</th>
+                <th><abbr title='Primary Key'>PK</abbr></th>
+                <th><abbr title='Not Null'>NN</abbr></th>
+                <th><abbr title='Unique'>UQ</abbr></th>
+                <th><abbr title='Binary'>BIN</abbr></th>
+                <th><abbr title='Unsigned'>UN</abbr></th>
+                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                <th><abbr title='Auto Increment'>AI</abbr></th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>idUsuario</td>
+                <td>INT(11)</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td></td>
+                <td>Identificacion del usuario con el cual sera reconocido.</td>
+            </tr>
+            <tr>
+                <td>correo</td>
+                <td>VARCHAR(65)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Correo con el cual el usuario se registra.</td>
+            </tr>
+            <tr>
+                <td>clave</td>
+                <td>VARCHAR(45)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Clave establecida por el usuario para su ingreso a la red
+                    social.</td>
+            </tr>
+            <tr>
+                <td>estado</td>
+                <td>VARCHAR(20)</td>
+                <td>&nbsp;</td>
+                <td><i class="fas fa-check" style="color: #330099;"></i></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>Estado de la cuenta(Activo/Eliminar).</td>
+            </tr>
+        </table>
+    </div>
+
+{% endblock %}
